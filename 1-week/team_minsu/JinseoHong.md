@@ -23,7 +23,9 @@ Semantic element 는 자신의 의미를 브라우저와 개발자 모두에게 
 non-semantic tags
 
 ```html
-<div>, <span></span></div>
+<div></div>
+
+<span></span>
 ```
 
 위의 태그들은 자신의 contents에 대해 설명해주지 않음.
@@ -31,13 +33,11 @@ non-semantic tags
 semantic tags
 
 ```html
-<main>
-  ,
-  <aside>
-    ,
-    <nav></nav>
-  </aside>
-</main>
+<main></main>
+
+<aside></aside>
+
+<nav></nav>
 ```
 
 위의 태그들을 보면 어떤 내용이 들어갈지 유추할 수 있음

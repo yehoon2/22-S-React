@@ -196,4 +196,3 @@ a.classList.toggle('color-red'); -> // 있으면 제거 없으면 추가
     ```
     
     *핸들러는 event객체를 파라미터로 받는다.
-    

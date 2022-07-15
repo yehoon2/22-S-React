@@ -1,18 +1,5 @@
-# Team 민수
 # HTML, CSS 1주차
-## HTML 이란?
 
-[HTML: Hypertext Markup Language | MDN](https://developer.mozilla.org/ko/docs/Web/HTML)
-
-HTML : Hypertext Markup Language 웹의 기초적인 구성 요소. 웹 컨텐츠의 의미와 구조를 정의할 때 사용.
-Hypertext란 웹페이지를 다른 페이지로 연결하는 링크.
-
-## HTML 의 요소
-
-- Element
-  - Opening tag
-  - Content
-  - Closing tag
 ## Tag
 ### 1. 개념
 
@@ -65,88 +52,31 @@ P태그와 div 태그 차이
 3. ID Selector Style
 4. Class Selector Style
 5. Tag Selector Style
-<br>
-
-### 6. 강조하기 위한 tag
-- <i>i태그</i>와 <em>em태그</em>
-- <b>b태그</b>와 <strong>strong태그</strong>
-  - 이와같이 겉보기엔 같아도 용도가 다른 태그들이 있다.
-  - i태그와 b태그는 css로 꾸밀 것을 표시하기 위한 용도이고 em태그와 strong태그는 강조하기 위해 사용된다.
-<br>
-
-### 7. 가독성을 위한 태그이름 짓기
-- 태그 위주나 class(id)위주로 태그의 이름을 지으면 선택자가 장황해지고 요소를 식별하기 어렵다.
-- BEM (.Block__Element--Modifier)
-  - 태그 위주에 요소와 수정사항을 넣는 방식이다.
-  - 명확한 선택자로 중복 문제를 해소한다
-  - 높은 가독성과 이해하기 쉬운 구조를 가진다
-  - 예시) figure.card__image--soldout
-    - card라는 Block을 공유하고 있는 태그중 figure태그이며 요소는 image이다. 변경사항으로는 이미 판매된 상품임을 표시하기 위해 soldout을 사용했다.
 <br><br><br>
 
-
 ## Semantic Tag
+### 1. 개념
+- 사이트의 구조(레이아웃)을 설계하기 위한 태그로, HTML의 구조를 설계하는데 있어 태그에 의미를 부여 함으로써 사이트의 구조를 파악하기 용이할 수 있도록 도와주기 위해 만들어진 태그
+<br>
 
-Semantic element 는 자신의 의미를 브라우저와 개발자 모두에게 명확하게 설명하는 요소.
-
-non-semantic tags
-
-```html
-<div></div>
-
-<span></span>
-```
-
-위의 태그들은 자신의 contents에 대해 설명해주지 않음.
-
-semantic tags
-
-```html
-<main></main>
-
-<aside></aside>
-
-<nav></nav>
-```
-
-위의 태그들을 보면 어떤 내용이 들어갈지 유추할 수 있음
-
-### 1. 장점
+### 2. 장점
  1.	SEO 최적화에 유리
  2.	웹 접근성에 효율적
  3.	유지보수의 용이성
 <br>
 
-### 2. 웹페이지를 구성하는 semantic tags
-- `<header>`
-  - 페이지나 구획의 제목 역할을 하는 요소들
-  - 로고, 제목, 검색창 등
-- `<nav>`
-  - 메뉴나 색인 등
-- `<main>`
-  - 페이지의 주요 내용 부분
-  - 하나만 존재
-- `<article>`
-  - 페이지 내에서 재사용될 수 있거나 페이지로부터 독립적
-- `<section>`
-  - 페이지의 컨텐츠를 일정 단위로 나눌 때 사용
-  - 더 작은 단위는 div
-- `<aside>`
-  - 사이드 바 등 주요내용과 간접적으로 연관된 컨텐츠를 포함
-- `<footer>`
-  - 관리자 및 페이지의 정보가 들어감
+### 3. 대표적인 시멘틱 태그
+1.	Header : 페이지 제목 or 소개 내용
+2.	Nav : 메뉴 혹은 목차
+3.	Aside : 사이드바 
+4.	Main : 주 콘텐츠 영역
+5.	Section : 구체적인 시멘틱 태그가 없는 문서의 독립적인 영역을 나타냄
+6.	Article  : 게시글, 블로그 등 그 자체로 의미가 있는 웹사이트의 부분이며 독립적으로 배포 또는 재사용되도록 의도된 문서
+7.	Footer : 일반적으로 섹션의 작성자에 대한 정보,저작권 데이터 등등
 <br><br><br>
 
 ## Attribute
-[HTML basics - Learn web development | MDN](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
 
-속성이란 실제로는 표시되지 않는 추가적인 정보를 담는다.
-
-```html
-<p class="new-string">Hello World</p>
-```
-
-예를 들어 위처럼 class 속성을 이용해 나중에 해당 element 를 특정할 수 있으며 이때 속성은 식별자의 역할을 한다. 위에서 class 는 Attribute name(속성 이름)이며 뒤에 오는 new-string 은 Attribute value 이다.
 ### 1. 구조
 - 속성은 HTML 여는 태그 뒤에 한 칸 공백을 두고 입력한다.
 - 속성은 속성명, 등호, 따옴표, 속성값 순서로 구성된다.
@@ -210,7 +140,7 @@ ex) <p class>안녕</p>
 2.  동적인 속성을 갖고있음
 <br><br><br>
 
-## Layout - Flex & Grid
+## Grid와 Flex
 
 ### 1. Grid 와 Flex 차이
 - flex 는 1차원으로 수평, 수직 영역  중 하나의 방향으로만 레이아웃을 나눌 수 있다.
@@ -225,29 +155,9 @@ ex) <p class>안녕</p>
 
 - 부모 요소인 .container 을 Flex Container 이라고 부르고,
 - 자식 요소인 .item 을 Flex Item 이라고 부른다.
-<br>
-
-### 3. Flex
-[이번에야말로 CSS Flex를 익혀보자](https://studiomeal.com/archives/197)
-
-Flex (Flexible box, Flexbox)는 레이아웃 배치 전용 기능으로 고안되었기에 float, inline-block 을 이용하던 방식과 비교하여 강력하고 편리한 기능 사용 가능.
-
-```html
-<div class="container">
-  <div class="item">helloflex</div>
-  <div class="item">abc</div>
-  <div class="item">helloflex</div>
-</div>
-```
-
-부모 요소인 div.container는 Flex Container 라고 한다. 자식요소인 div.item 들은 Flex Item 이라고 부른다.
-
-“컨테이너가 Flex의 영향을 받는 전체 공간이고, 설정된 속성에 따라 각각의 아이템들이 어떤 형태로 배치되는 것"
-
-Flex의 속성에는 컨테이너에 적용하는 속성과 아이템에 적용하는 속성으로 나뉜다.
 <br><br><br>
 
-### 4. Grid 구조
+### 3. Grid 구조
 <br>
 
 ![Grid 구조](https://studiomeal.com/wp-content/uploads/2020/01/03-2.jpg)
@@ -277,22 +187,8 @@ Grid 라인으로 둘러싸인 사각형 영역으로, 그리드 셀의 집합�
 <br>
 
 ## Media Query
-
-[Using media queries - CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-
-## Media Query
-
-미디어 쿼리란 사용자가 사용하는 디바이스의 유형과 어떤 특성이나 수치에 따라서 웹이나 앱의 화면을 조정할 때 사용됨
-
-미디어 쿼리는 다음과 같은 상황에 사용됨.
-
-- CSS 에서 @media, @import 의 at-rule들을 사용하여 특정 조건에 따라 스타일을 변경할 때
-- style, link, source 의 기타 HTML 요소에 media= 속성을 사용해 특정할 때
-- 미디어 상태를 판별하고 관측할 때 Window.matchMedia( ), MediaQueryList.addListener( ) 메서드를 JS 에서 사용.
-
-### 1. 구문
-
-미디어 유형(optional), 미디어 특성(자유로움)의 표현식으로 이루어짐. 논리 연산자를 사용해 다양한 수의 쿼리를 결합할 수 있음. 이는 대소문자를 구분하지 않음.
+### 1.개념
+- 미디어 쿼리는 반응형 웹을 만들기 위한 도구로 화면 해상도, 기기 방향 등의 조건으로 HTML에 적용하는 스타일을 전환할 수 있는 CSS3의 속성이다.
 <br>
 
 ### 2. 가장 많이 쓰이는 문법

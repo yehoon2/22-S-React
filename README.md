@@ -188,18 +188,18 @@
 
 ### ✍️ 진행 방식
 
-- 주차 학습일 마다 학습 후 {이름}.md file에 정리하여 pr을 올린다.
+- 주차 학습일 마다 학습 후 {number}-{이름}.md file에 정리하여 pr을 올린다.
 
-- 마지막 학습일에는 모두가 모여 RandomBitFlip.md 에 최종 정리하여 작성 후 pr을 올린다.
+- 매주 마지막에는 RandomBitFlip.md 에 최종 정리하여 작성 후 slack에 올린다.
 
 
 ### 학습 내용 보러 가기
 
-**👶 1주차**
+**👶주차별 내용**
 
-| Team 이름 | Github 링크 |
-|:------:|:---------:|
-| Team 유빈 | [team유빈-1주차](https://github.com/MJU-Coin/22-S-React/tree/main/1-week/team_youbin)|
-| Team 지은 | [team지은-1주차](https://github.com/MJU-Coin/22-S-React/tree/main/1-week/team_jieun)|
-| Team 보겸 | [team보겸-1주차](https://github.com/MJU-Coin/22-S-React/tree/main/1-week/team_bokyeom)|
-| Team 민수 | [team민수-1주차](https://github.com/MJU-Coin/22-S-React/tree/main/1-week/team_minsu)|
+| Team 이름 | 1주차 | 2주차 | 3주차 |
+|:------:|:---------:|:---------:|:---------:|
+| Team 유빈 | [team유빈-1주차](https://github.com/MJU-Coin/22-S-React/tree/main/1-week/team_youbin)| [team유빈-2주차](https://github.com/MJU-Coin/22-S-React/tree/main/2-week/team_youbin)| [team유빈-3주차](https://github.com/MJU-Coin/22-S-React/tree/main/3-week/team_youbin)|
+| Team 지은 | [team지은-1주차](https://github.com/MJU-Coin/22-S-React/tree/main/1-week/team_jieun)| [team지은-2주차](https://github.com/MJU-Coin/22-S-React/tree/main/2-week/team_jieun)| [team지은-3주차](https://github.com/MJU-Coin/22-S-React/tree/main/3-week/team_jieun)|
+| Team 보겸 | [team보겸-1주차](https://github.com/MJU-Coin/22-S-React/tree/main/1-week/team_bokyeom)| [team보겸-2주차](https://github.com/MJU-Coin/22-S-React/tree/main/2-week/team_bokyeom)| [team보겸-3주차](https://github.com/MJU-Coin/22-S-React/tree/main/3-week/team_bokyeom)|
+| Team 민수 | [team민수-1주차](https://github.com/MJU-Coin/22-S-React/tree/main/1-week/team_minsu)| [team민수-2주차](https://github.com/MJU-Coin/22-S-React/tree/main/2-week/team_minsu)| [team민수-3주차](https://github.com/MJU-Coin/22-S-React/tree/main/3-week/team_minsu)|

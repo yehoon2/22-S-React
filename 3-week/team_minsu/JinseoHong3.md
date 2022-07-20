@@ -70,3 +70,111 @@ MPA 는 페이지를 이동할 때마다 새로운 페이지 요청.
 [JSX 소개 - React](https://ko.reactjs.org/docs/introducing-jsx.html)
 
 JSX는 자바스크립트의 문법을 확장한 것.
+
+# Component & Props
+
+[Components와 Props - React](https://ko.reactjs.org/docs/components-and-props.html)
+
+## Componenets
+
+개념적으로 컴포넌트는 JS 함수와 유사. “props” 라고 하는 입력을 받은 이후 React element 반환.
+
+### 함수 컴포넌트 & 클래스 컴포넌트
+
+컴포넌트 정의 방법: JS 함수 작성.
+
+```jsx
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+
+props라는 객체 인자를 받은 후 React element 반환. JS 함수 이기 떄문에 이를 함수 컴포넌트라고 호칭
+
+```jsx
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
+
+ES6 class를 활용한 컴포넌트 정의
+
+### 컴포넌트 렌더링
+
+React element 는 사용자 정의 컴포넌트로도 나타낼 수 있음.
+
+```jsx
+const element = <Welcome name="Sara" />;
+```
+
+React 가 사용자 정의 컴포넌트로 작성한 Element 를 발견하면 JSX Attribute 와 자식을 해당 컴포넌트에 단일 객체로 전달. 이 객체를 ‘props’ 라고 함
+
+```jsx
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+const element = <Welcome name="Sara" />;
+ReactDOM.render(element, document.getElementById("root"));
+```
+
+위 예시에서 일어나는 일들.
+
+1. <Welcome name="Sara" /> 엘리먼트로 ReactDOM.render() 호출
+2. React는 {name: ‘Sara’} 를 props 로 하여 Welcome 컴포넌트 호출.
+3. Welcome 컴포넌트는 결과적으로 < h1>Hello, {props.name}</> 엘리먼트 반환
+4. React DOM은 < h1>Hello, {props.name}</> 엘리먼트와 일치하도록 DOM을 효율적으로 업데이트.
+
+\*컴포넌트의 이름은 항상 대문자로 시작함.
+
+### 컴포넌트 합성
+
+컴포넌트는 자신의 출력에 다른 컴포넌트 참조 가능.
+
+위에서 만든 Welcome을 여러번 렌더링하는 App 컴포넌트 만들 수 있음.
+
+```jsx
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+function App() {
+  return (
+    <div>
+      <Welcome name="Sara" />
+      <Welcome name="Cahal" />
+      <Welcome name="Edite" />
+    </div>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
+```
+
+### 컴포넌트 추출.
+
+재사용 가능한 컴포넌트를 만들어두는 것. 중첩구조로 이루어지면 불편할 수 있는 경우, 각 구성요소를 개별적으로 재사용할 수 있게 만든다.
+
+### Props는 읽기 전용.
+
+컴포넌트에서는 자체 props를 수정해서는 안된다.
+
+```jsx
+function sum(a, b) {
+  return a + b;
+}
+```
+
+순수함수: 위처럼 입력값을 바꾸지 않고 항상 동일한 입력값에 동일한 결과를 반환.
+
+```jsx
+function withdraw(account, amount) {
+  account.total -= amount;
+}
+```
+
+위 함수는 입력값을 바꾸기 때문에 순수함수가 아님.
+
+React에서는 모든 React 컴포넌트는 자신의 props 를 다룰 때 반드시 순수함수처럼 동작해야함.

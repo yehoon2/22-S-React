@@ -191,7 +191,7 @@
 - 주차 학습일 마다 학습 후 {number}-{이름}.md file에 정리하여 pr을 올린다.
 - pr은 팀원들이 확인 후 코멘트와 approve를 통해서 검증된 뒤 merge한다.
 
-- 매주 마지막에는 RandomBitFlip.md 에 최종 정리하여 작성 후 slack에 올린다.
+- 매주 마지막에는 RandomBitFlip.md 에 최종 정리하여 작성 후 멘토을 Reviwer로 설정하고 PR을 올린다.
 
 
 ### 학습 내용 보러 가기

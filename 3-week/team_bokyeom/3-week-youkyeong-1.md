@@ -11,9 +11,13 @@
 
 ---
 
+
+
 ## **CSS-  cascading style sheets**
 
 ---
+
+
 
 ## **JavaScript**
 
@@ -43,6 +47,8 @@
 
 ### JS 함수
 
+
+
 ```jsx
 //function statement
 function sum (a,b){
@@ -56,6 +62,8 @@ return a*b;
 ```
 
 ---
+
+
 
 ## **React**
 
@@ -89,6 +97,8 @@ return a*b;
 - 높은 상태관리 복잡도
 
 ---
+
+
 
 [SPA vs MPA와 SSR vs CSR 장단점 뜻정리 - 하나몬](https://hanamon.kr/spa-mpa-ssr-csr-%EC%9E%A5%EB%8B%A8%EC%A0%90-%EB%9C%BB%EC%A0%95%EB%A6%AC/)
 
@@ -148,6 +158,8 @@ return a*b;
     - 페이지 요청이 들어오는 경우 불필요한 ****템플릿도 중복해서 로딩→ (성능)서버 렌더링으로 인한 부하 →(생산성)모바일 앱 개발시 추가적인 백엔드 작업이 요구되어 개발의 복잡성
 
 ---
+
+
 
 ## JSX
 

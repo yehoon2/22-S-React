@@ -13,6 +13,7 @@
 - [X] Section 02 : 리액트 시작하기
 - [X] Section 03 : JSX 
 - [ ] Section 04 : Redering Elements -- 진행중!
+- [ ] Section 05 : Components and Props
 - [ ] Section 06 : State and Lifecycle
 - [ ] Section 07 : Hooks
 - [ ] Section 08 : Handling Events

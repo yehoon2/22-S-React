@@ -262,7 +262,7 @@ React.createElement(
 
 ## Lifecycle
 
-- 리액트 컴포넌트의 생명주기 (컴포넌트가 생성되는 시점과 사라지는 시점이 정해져 있다는 의미)
+- 리액트 컴포넌트의 생명주기 (컴포넌트가 생성되는 시점과 사라지는 시점이 정해져 있다는 의미이다.)
 
 ![Lifecycle.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5f02df57-d352-4cc2-a951-ee12ebc86114/Lifecycle.png)
 

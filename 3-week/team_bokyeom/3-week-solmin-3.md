@@ -238,9 +238,6 @@ function UserInfo(props){
 //변경
 <UserInfo user={props.author} />
 ```
-
-![화면 캡처 2022-07-23 155502.png](2022%207%2023%20Cow%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%86%AB%E1%84%90%E1%85%B3%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%83%E1%85%B3%20%E1%84%80%E1%85%A9%E1%86%BC%E1%84%87%E1%85%AE%201c8a05340a04471f9ce544a391c2de95/%25ED%2599%2594%25EB%25A9%25B4_%25EC%25BA%25A1%25EC%25B2%2598_2022-07-23_155502.png)
-
 기능 단위로 구분하고 곧바로 재사용이 가능한 형태로 추출하는 것이 좋음
 
 State(상태)
@@ -266,7 +263,4 @@ Lifecycle(생명주기)
 
 - Component가 생성되는 시점과 사라지는 시점이 정해져 있음
 - Mounting - Updating - Unmounting
-
-![images_ashley_ku_post_ae63bd9e-1295-4dd8-97cb-4c2ec362d955_image.png](2022%207%2023%20Cow%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%86%AB%E1%84%90%E1%85%B3%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%83%E1%85%B3%20%E1%84%80%E1%85%A9%E1%86%BC%E1%84%87%E1%85%AE%201c8a05340a04471f9ce544a391c2de95/images_ashley_ku_post_ae63bd9e-1295-4dd8-97cb-4c2ec362d955_image.png)
-
 - Component는 계속 존재하는 것이 아니라, 시간의 흐름에 따라 생성되고 업데이트 되다가 사라짐

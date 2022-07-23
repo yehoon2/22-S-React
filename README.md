@@ -191,16 +191,17 @@
 - 주차 학습일 마다 학습 후 {number}-{이름}.md file에 정리하여 pr을 올린다.
 - pr은 팀원들이 확인 후 코멘트와 approve를 통해서 검증된 뒤 merge한다.
 
-- 매주 마지막에는 RandomBitFlip.md 에 최종 정리하여 작성 후 slack에 올린다.
+- 매주 마지막에는 주차별 폴더 README.md 에 최종 정리하여 작성한다.
+- 멘토을 Reviewer로 설정하고 PR을 올린다.
 
 
 ### 학습 내용 보러 가기
 
 **👶주차별 내용**
 
-| Team 이름 | 1주차 | 2주차 | 3주차 |
-|:------:|:---------:|:---------:|:---------:|
-| Team 유빈 | [team유빈-1주차](https://github.com/MJU-Coin/22-S-React/tree/main/1-week/team_youbin)| [team유빈-2주차](https://github.com/MJU-Coin/22-S-React/tree/main/2-week/team_youbin)| [team유빈-3주차](https://github.com/MJU-Coin/22-S-React/tree/main/3-week/team_youbin)|
-| Team 지은 | [team지은-1주차](https://github.com/MJU-Coin/22-S-React/tree/main/1-week/team_jieun)| [team지은-2주차](https://github.com/MJU-Coin/22-S-React/tree/main/2-week/team_jieun)| [team지은-3주차](https://github.com/MJU-Coin/22-S-React/tree/main/3-week/team_jieun)|
-| Team 보겸 | [team보겸-1주차](https://github.com/MJU-Coin/22-S-React/tree/main/1-week/team_bokyeom)| [team보겸-2주차](https://github.com/MJU-Coin/22-S-React/tree/main/2-week/team_bokyeom)| [team보겸-3주차](https://github.com/MJU-Coin/22-S-React/tree/main/3-week/team_bokyeom)|
-| Team 민수 | [team민수-1주차](https://github.com/MJU-Coin/22-S-React/tree/main/1-week/team_minsu)| [team민수-2주차](https://github.com/MJU-Coin/22-S-React/tree/main/2-week/team_minsu)| [team민수-3주차](https://github.com/MJU-Coin/22-S-React/tree/main/3-week/team_minsu)|
+| Team 이름 | 1주차 | 2주차 | 3주차 | 4주차 |
+|:------:|:---------:|:---------:|:---------:|:---------:|
+| Team 유빈 | [team유빈-1주차](https://github.com/MJU-Coin/22-S-React/tree/main/1-week/team_youbin)| [team유빈-2주차](https://github.com/MJU-Coin/22-S-React/tree/main/2-week/team_youbin)| [team유빈-3주차](https://github.com/MJU-Coin/22-S-React/tree/main/3-week/team_youbin)| [team유빈-4주차](https://github.com/MJU-Coin/22-S-React/tree/main/4-week/team_youbin)|
+| Team 지은 | [team지은-1주차](https://github.com/MJU-Coin/22-S-React/tree/main/1-week/team_jieun)| [team지은-2주차](https://github.com/MJU-Coin/22-S-React/tree/main/2-week/team_jieun)| [team지은-3주차](https://github.com/MJU-Coin/22-S-React/tree/main/3-week/team_jieun)| [team지은-4주차](https://github.com/MJU-Coin/22-S-React/tree/main/4-week/team_jieun)|
+| Team 보겸 | [team보겸-1주차](https://github.com/MJU-Coin/22-S-React/tree/main/1-week/team_bokyeom)| [team보겸-2주차](https://github.com/MJU-Coin/22-S-React/tree/main/2-week/team_bokyeom)| [team보겸-3주차](https://github.com/MJU-Coin/22-S-React/tree/main/3-week/team_bokyeom)| [team보겸-4주차](https://github.com/MJU-Coin/22-S-React/tree/main/4-week/team_bokyeom)|
+| Team 민수 | [team민수-1주차](https://github.com/MJU-Coin/22-S-React/tree/main/1-week/team_minsu)| [team민수-2주차](https://github.com/MJU-Coin/22-S-React/tree/main/2-week/team_minsu)| [team민수-3주차](https://github.com/MJU-Coin/22-S-React/tree/main/3-week/team_minsu)| [team민수-4주차](https://github.com/MJU-Coin/22-S-React/tree/main/4-week/team_minsu)|

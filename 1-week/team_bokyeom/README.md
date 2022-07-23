@@ -1,1 +1,143 @@
-# Team 보겸
+# **Team 보겸**
+
+## **HTML**
+
+---
+
+**— Tag**
+
+참고: [TCP SCHOOL - Tags](http://www.tcpschool.com/html-tags/intro)
+
+**— Semantic Tag**
+
+의미를 가지고 있는 태그
+
+- 장점
+  - 검색 엔진 최적화 용이
+  - 웹 접근성과 사용성 향상
+  - 유지 보수 용이
+- 종류
+  - header: HTML 문서나 섹션(section) 부분에 대한 헤더(header)
+  - nav: HTML 문서 사이를 탐색할 수 있는 링크(link)의 집합
+  - aside: HTML 문서의 주요 콘텐츠(content)
+  - section: HTML 문서에서 섹션(section) 부분
+  - article: HTML 문서에서 독립적인 하나의 기사(article) 부분
+  - footer: HTML 문서에서 페이지 부분 이외의 콘텐츠(content)
+  - main: HTML 문서의 주요 콘텐츠(content)
+  - details: 사용자가 보거나 숨길 수 있는 추가적인 설명문
+  - figure: HTML 문서에서 그래픽과 비디오 등의 독립적인 콘텐츠(content)
+  - figcaption: figure 요소를 위한 캡션
+  - mark: 하이라이팅 된 텍스트
+  - time: 날짜와 시간
+  - summary: details 요소에 나타날 내용
+  - 등등…
+
+## **CSS**
+
+---
+
+**— Grid**
+
+부모 요소인 Grid Container와 자식 요소인 Grid Item으로 구성
+
+- Grid Container 속성
+  - grid-template-rows: 행의 크기
+  - grid-template-columns: 열의 크기
+  - align-content: 콘텐츠 수직 정렬
+  - justify-content: 콘텐츠 수평 정렬
+  - align-items: 아이템 수직 정렬
+  - justify-items: 아이템 수평 정렬
+  - 등등…
+- Grid Item 속성
+  - grid-row-start: 아이템의 행 시작 위치
+  - grid-row-end: 아이템의 행 끝 위치
+  - order: 배치 순서
+  - z-index: 쌓이는 순서
+  - 등등…
+
+**— Flex(Flexbox)**
+
+부모 요소인 Flex Container와 자식 요소인 Flex Item로 구성
+
+- Flex Container 속성
+  - flex-direction: 컨테이너 내의 아이템들을 배치할 때 사용할 주축 및 방향
+  - flex-wrap: 부모 요소의 영역을 벗어날 때 적용할 배치 방식
+  - justify-content: 주축에서 아이템들을 정렬할 방식
+  - align-items: 주축의 반대에서 아이템들을 정렬할 방식
+  - gap: 아이템들 간의 간격
+  - 등등…
+- Flex Item 속성
+  - flex-basis: 주축 상의 크기
+  - flex-grow: flex-basis 값보다 커질 수 있는지 결정
+  - flex-shrink: flex-basis 값보다 작아질 수 있는지 결정
+  - 등등…
+
+**— 적응형 웹(Adaptive Web)**기기의 유형에 따라 별도의 페이지를 구현 \_ 예) 네이버, 다음 등
+
+- 장점
+  - 좋은 성능
+
+**— 반응형 웹(Responsive Web)**
+
+화면의 크기에 따라 요소들의 배치를 조절 \_ 예) 깃허브 등
+
+- 장점
+  - 유지 보수 용이
+  - 유연성
+
+**— 미디어 쿼리(Media Query)**
+
+미디어 관련 속성을 이용한 표현식을 통해 스타일이 적용되는 범위를 조절
+
+```
+@media (표현식) {
+  ...
+}
+
+@media 매체 유형 and (표현식) {
+  ...
+}
+```
+
+- 매체 유형(Media Type)
+  - all: 기본 값, 모든 매체
+  - print: 인쇄 결과물 및 출력 미리 보기
+  - screen: 컴퓨터나 태블릿, 스마트폰 등 스크린이 있는 매체
+  - speech: 웹 페이지를 읽어주는 스크린 리더
+
+**— 가상 클래스(의사 클래스)**
+
+실제로 존재하는 요소에 특정 이벤트나 환경에 맞춰 가상으로 클래스 부여
+
+- :link - 방문한 적이 없는 링크
+- :visited - 방문한 적이 있는 링크
+- :hover - 마우스를 롤오버 했을 때
+- :active - 마우스를 클릭했을 때
+- :focus - 포커스 되었을 때 (input 태그 등)
+- :first - 첫 번째 요소
+- :last - 마지막 요소
+- :first-child - 첫 번째 자식
+- :last-child - 마지막 자식
+- :nth-child(2n+1) - 홀수 번째 자식
+- :not() - 해당 요소 제외
+- 등등…
+
+**— 가상 요소(의사 요소)**
+
+가상의 요소를 만들어 스타일 적용
+
+- ::before - 요소 내용 앞에 새 콘텐츠(요소)를 추가
+- ::after - 요소 내용 끝에 새 콘텐츠(요소)를 추가
+- ::selection - 마우스 드래그로 선택한 텍스트 콘텐츠 영역을 선택
+- ::marker - 목록 아이템 앞에 붙는 마커를 선택
+- ::first-letter - 현재 웹 브라우저에 보이는 상태를 기준으로 요소의 텍스트 콘텐츠 첫 글자를 선택
+- ::first-line - 현재 웹 브라우저에 보이는 상태를 기준으로 요소의 텍스트 콘텐츠 첫 줄 내용을 선택
+- 등등…
+
+**— 트랜지션(Transition)**
+
+참고: [TCP SCHOOL - Transition](http://www.tcpschool.com/css/css3_transform_transition)
+
+**— 애니메이션(Animation)**
+
+참고: [TCP SCHOOL - Animation](http://www.tcpschool.com/css/css3_transform_animation)

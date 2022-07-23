@@ -62,3 +62,6 @@ props,state가 변경된다.(New props, setState(), forceUpdate()
 언제? 상위 컴포넌트에서 현재 컴포넌트를 더이상 화면에 표시하지 않을 때.
 생명주기 함수(라이프사이클메서드): componentWillUnmount
 - -> component 는 계속 존재하는 것이 아니라 생성되고 사망하기도 한다.
+
+시간이없어서 예쁘게 꾸미지는 못했습니다..
+이번 주말에 예쁘게 꾸미겠습니다.

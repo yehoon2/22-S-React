@@ -1,4 +1,4 @@
-# <Hooks>
+### <Hooks>
 
 - 리액트 버전 16.8에서 새롭게 등장한 개념! 최근에 리액트로 개발할 때 대부분이 훅을 사용한다.
 - 클래스 컴포넌트 → 생성자에서 state를 정의, setState() 함수를 통해 state 업데이트, Lifecycle methods 제공

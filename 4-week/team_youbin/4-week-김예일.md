@@ -20,8 +20,8 @@ function component를 보완하기 위해 생성된 것이 Hooks
 ```jsx
 import React, {useState} from "React";
 function Counter(props){
-	Const [count, setCount] = useState(0);
-	Return (
+	const [count, setCount] = useState(0);
+	return (
 	<div>
 		<p> 총 {count}번 클릭했습니다.</p>
 		<button onClick={ ( ) => setCount (count + 1)}>
@@ -160,3 +160,7 @@ function Toggle(props) {
 - 즉, Event Handler에 전달할 데이터
 - parameter 매개변수라고도 함
 - 함수 컴포넌트에서 사용하며 매개변수 순서는 상관 X
+
+### Quiz
+1. Hook은 클래스 컴포넌트에서 호출 가능하다 (O/X)
+2. useCallback() Hook이 useMemo() Hook과 유사하지만 다른 점은?

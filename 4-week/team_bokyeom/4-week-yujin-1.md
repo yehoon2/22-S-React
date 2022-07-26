@@ -8,17 +8,17 @@
 
 (모두 use로 시작)
 
-![e1.jpg](COW%20STUDY%20c6e26633180d432d87ca931f06efe1d4/e1.jpg)
 
-![e2.jpg](COW%20STUDY%20c6e26633180d432d87ca931f06efe1d4/e2.jpg)
+
+
 
 # useState()
 
 : state를 사용하기 위한 Hook
 
-![e3.jpg](COW%20STUDY%20c6e26633180d432d87ca931f06efe1d4/e3.jpg)
 
-![e4.jpg](COW%20STUDY%20c6e26633180d432d87ca931f06efe1d4/e4.jpg)
+
+
 
 [코드설명]
 
@@ -34,7 +34,6 @@ count값을 변수로 사용하면 버튼 클릭시 count값을 증가시킬 수
 
 ● 사용법
 
-![e5.jpg](COW%20STUDY%20c6e26633180d432d87ca931f06efe1d4/e5.jpg)
 
 초기값을 설정하고 출력하면 배열이 나타나는데 첫번째 항목은 이펙트 함수 , 두번째 항목은 의존성 배열
 
@@ -54,11 +53,7 @@ count값을 변수로 사용하면 버튼 클릭시 count값을 증가시킬 수
 
 ● effect가 의존하고 있는 배열이 의존성 배열 안에 있는 값이 하나라도 변경되면 effect 함수가 실행됨
 
-![e6.jpg](COW%20STUDY%20c6e26633180d432d87ca931f06efe1d4/e6.jpg)
 
-![e7.jpg](COW%20STUDY%20c6e26633180d432d87ca931f06efe1d4/e7.jpg)
-
-![e8.jpg](COW%20STUDY%20c6e26633180d432d87ca931f06efe1d4/e8.jpg)
 
 [코드설명]
 
@@ -74,9 +69,7 @@ document의 title을 업데이트함
 
 접근할 수도 있음
 
-![e9.jpg](COW%20STUDY%20c6e26633180d432d87ca931f06efe1d4/e9.jpg)
 
-![e10.jpg](COW%20STUDY%20c6e26633180d432d87ca931f06efe1d4/e10.jpg)
 
 # useMemo
 
@@ -86,15 +79,13 @@ document의 title을 업데이트함
 
 입력값으로 함수를 호출하면 새로 함수를 호출하지 않고 저장해놓았던 호출결과를 반환하는 것
 
-![c1.jpg](COW%20STUDY%20c6e26633180d432d87ca931f06efe1d4/c1.jpg)
+
 
 ● useMemo로 전달된 함수는 렌더링이 일어나는 동안 실행됨
 
 → 그렇기 때문에 렌더링이 일어나는 동안 실행되어서는 안될 작업을 넣으면 안됨
 
-![c2.jpg](COW%20STUDY%20c6e26633180d432d87ca931f06efe1d4/c2.jpg)
 
-![c3.jpg](COW%20STUDY%20c6e26633180d432d87ca931f06efe1d4/c3.jpg)
 
 # useCallback
 
@@ -102,7 +93,7 @@ document의 title을 업데이트함
 
 ● 의존성 변수가 하나라도 바뀌면 memoizedCallback함수를 반환
 
-![c4.jpg](COW%20STUDY%20c6e26633180d432d87ca931f06efe1d4/c4.jpg)
+
 
 # useRef
 
@@ -116,7 +107,7 @@ document의 title을 업데이트함
 
 ● useRef() Hook은 내부의 데이터가 변경되었을 때 별도로 알리지 않는다
 
-![c7.jpg](COW%20STUDY%20c6e26633180d432d87ca931f06efe1d4/c7.jpg)
+
 
 ### [추가조사]
 

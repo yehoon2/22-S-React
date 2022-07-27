@@ -96,7 +96,7 @@ Element Variable은 React Component를 변수처럼 사용하는 방법
 컴포넌트를 랜더링 하고 싶지 않을 때는 null을 return
 
 
-## Quiz - D1
+## Quiz
 
 1. 다음 각각의 useEffect() 훅의 이펙트 함수가 언제 실행되는지 쓰시오.
 ```jsx
@@ -127,50 +127,3 @@ Element Variable은 React Component를 변수처럼 사용하는 방법
     <h1> {num > 7 ? '참' : '거짓'} </h1>
 
 ```
-----------------------
-
-### map() - List렌더링
-
-```jsx
-const numbers = [1,2,3,4,5];
-const listItems = numbers.map((number) =>
-	<li key={}>
-			{number}
-	</li>
-);
-```
-
-**key값 지정**
-
-1. 값으로 지정: `<li key={numbers.toString()}>` 
-    
-    → 배열 값이 중복이면 key값의 중복이 생길 수 있다.
-    
-2. id로 지정
-3. index로 지정: id가 없을때만 사용, default
-
-### Form
-
-Controlled Component: 값이 React의 통제를 받는 Input Form Element
-
-→ 여러개의 입력 양식의 값을 원하는데로 제어 가능!(입력 값이 Controlled Component의 state로 관리되기 때문)
-
-**Form 종류**
-
-```jsx
-// input 태그
-<input type="text" value={value} onChange={handleChange}/>
-
-// textarea 태그
-<textarea value={value} onChange={handleChange}/>
-
-// select 태그
-<select value={value} onChange={handelChange}>
-	<option value="apple">사과</option>
-	<option value="banana">바나나</option>
-</select>
-```
-
-파일 input
-
-`<input type=”file”>` :읽기 전용이기때문에 Uncontrolled Component

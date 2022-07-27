@@ -159,7 +159,7 @@ Controlled Component: 값이 React의 통제를 받는 Input Form Element
 
 ```jsx
 // input 태그
-<input type="text" value={value} onChange={handleChange}/>
+<input type= "text" value={value} onChange={handleChange}/>
 
 // textarea 태그
 <textarea value={value} onChange={handleChange}/>
@@ -174,3 +174,17 @@ Controlled Component: 값이 React의 통제를 받는 Input Form Element
 파일 input
 
 `<input type=”file”>` :읽기 전용이기때문에 Uncontrolled Component
+
+## Quiz - D2
+
+1. 다음 코드의 문제점은?
+```jsx
+const numbers = [1,2,3,2,5];
+const listItems = numbers.map((number) =>
+	<li key={numbers.toString()}>
+			{number}
+	</li>
+);
+```
+
+2. Mutiple Input을 제어하는 방법은?

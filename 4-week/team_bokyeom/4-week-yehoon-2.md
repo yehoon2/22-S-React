@@ -7,6 +7,7 @@
 
 **잘못된 Hook 사용법**
 
+![Untitled](Hook(2)%200b593140a7764d95a9b30625404df157/Untitled.png)
 
 잘못된 이유: if문에 useEffect() Hook이 걸려서, 만약 if문이 false라면 Hook이 호출되지 않기 때문이다. 그렇게 되면 렌더링 할 때마다 Hook이 같은 순서로 호출되지 않는다.
 

@@ -263,3 +263,239 @@ const refContainer = useRef(초깃값);
 - Hook은 최상위 레벨에서만 호출해야 한다
     - 반복문이나 조건문, 중첩된 함수내에서 호출하면 안됨
     - 컴포넌트가 렌더링될 때마다 매번 같은 순서로 호출되어야 됨(useState와 useEffect를 올바르게 호출해서 state를 올바르게 관리하기 위해서)
+
+
+# Hooks
+
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b60e3aa3-991b-4fc1-abf6-0bad8eb4e120/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T103314Z&X-Amz-Expires=86400&X-Amz-Signature=430f644c7ab2c5258c0b5cfd8b30bc4fe41b67c0c35e1963b60c1348a9c530c5&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+
+- Hooks를 통해 Class Component에서만 가능했던 기능을 함수 컴포넌트에서도 사용할 수 있게 됨
+- 함수 컴포넌트는 렌더링 될 때마다 내부의 것들을 다시 계산해야 하기에 Hooks가 필요하다
+- 원래 존재한 어떤 기능에 끼어 들어가 같이 수행되게 함
+
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9944bfb9-4034-416d-aac8-c09d7ca33e38/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T103327Z&X-Amz-Expires=86400&X-Amz-Signature=f0f9a3953c5c3a2ac78cdcd75a99f1724593d3d18ed65fb9e106e13296aecf0e&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+
+- 함수 컴포넌트안에 Hooks을 걸어 원할 때 관련 함수를 사용할 수 있게 함
+- 각 함수들은 모두 use로 시작함 (Hooks을 나타냄)
+
+## useState
+
+- state를 사용하기 위한 Hook
+- 상태 관리를 한다
+- 변수를  새로고침 없이 갱신할 수 있다
+    
+    ```jsx
+    let num = 0;
+    <button onClick = {() => {num ++}}>버튼</button>
+    ```
+    
+    - 위와 같은 경우엔 웹에서는 숫자가 바뀌는걸 볼 수 없지만 useState를 사용하면 새로고침 없이 렌더링을 해줘서 웹에도 적용이 된다
+- 함수 컴포넌트에서는 state를 사용하지 않기에 useState를 통해 사용함
+
+### useState사용법
+
+```jsx
+const [변수명, set함수명] = useState(초기값);
+```
+
+### useState예시
+
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b95399e8-c277-4fd0-9325-6031f0aaf740/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220728%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220728T103351Z&X-Amz-Expires=86400&X-Amz-Signature=3817397a4451c35b50721048433282b39f8ae360f790820369c222c10d31c125&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+
+- 변수명 = count      set함수명 = setCount
+- 초기값은 0
+- count 값이 변경되면 컴포넌트값이 변경되며 재 랜더링 되기에 화면에 변경값이 나오게 된다
+- useState에는 변수 각각에 대해 set함수가 따로 존재한다
+
+## useEffect
+
+- side effect를 수행하기 위한 Hook
+- 렌더링 직후 작업을 설정한다
+    - 렌더링  될 때마다 특정작업을 수행하도록 설정할 수 있는 Hook
+- effect에 관한 작업들은 다른 컴포넌트에 영향을 미칠 수 있고 렌더링  중에는 작업이 완료될 수 없기에 side로 실행시키겠다는 의미에서 side effect를 사용하고 이를 실행할 수 있게 해주는 Hook이 useEffect이다
+- mount에 사용되는 함수들을 하나로 통합해서 기능을 제공함
+    - componentDidMount와 componentDidUpdate를 합친 형태와 유사
+- return으로 받는 것이 life cycle의 unmount와 역할이 같다 (return 안에 있는 것이 unmount되기 전에 실행 됨)
+- 외부 API를 요청하거나, 반복작업, 작업예약 등에 쓰인다
+
+### side effect
+
+- react에서의 side effect는 부작용이 아닌 효과, 영향으로 쓰임
+- effect : 서버에서 데이터를 받아오거나 수동으로 DOM을 변경하는 작업 등을 의미
+
+### useEffect() 사용법
+
+```jsx
+useEffect(이펙트 함수, 의존성 배열);
+```
+
+의존성 배열 :  이 effect가 의존하고 있는 배열, 배열 안에 있는 값이 변경되면 effect 함수가 실행 됨
+
+### Effect함수가 실행되는 경우
+
+- 처음 컴포넌트가 렌더링 된 이후
+- 업데이트 인한 재렌더링 이후
+
+### Effect함수 실행 조정하기
+
+```jsx
+useEffect(이펙트 함수, []);
+```
+
+- Effect function을 mount와 unmount시에 단 한 번씩만 실행되게 하는 방법이다
+- 의존성 배열에 빈 배열을 넣음으로서 실행을 조절할 수 있다
+    - 해당 effect가 props나 state에 있는 어떤 것도 의존하지 않기에 여러번 실행되지 않음
+
+```jsx
+useEffect(이펙트 함수);
+```
+
+- 의존성 배열을 생략하면 컴포넌트가 업데이트될 때마다 호출됨
+
+### useEffect 예제
+
+```jsx
+useEffect(() => {
+	//의존성 배열에 따라 실행되는 것들 ex)console.log(input1)
+	...
+	return () => {
+	// 컴포넌트가 마운트 해제되기 전에 실행되는 것들
+	// ex) console.log('뒷정리'); 를 넣었다면 input1이 언마운트 되기전에 '뒷정리'라는 글자를 콘솔에 표시함
+	...
+	}
+}, [의존성 변수1, 의존성 변수2, ...]) //ex) 의존성 변수1에 input1을 넣었다면 input1에 값이 입력되어 업데이트될 때 특정 작업을 수행함;
+```
+
+## useMemo
+
+- Memoized value를 리턴하는 Hook
+- 특정 값들이 다시 실행되면서 초기화시키고 싶지 않을 때, 해당 값이 변하기 전까지 저장해놓을 수 있다.
+- useRef는 일반적인 값을, useMemo는 복잡한 함수의 리턴값을 기억
+
+### Memoized value
+
+- Memoization
+    - 최적화를 위해서 사용
+    - 연산량이 많이 드는 호출 결과를 저장해두었다가 같은 입력값으로 함수를 호출하면 새로 함수를 호출하지 않고 이전에 저장해둔 함수 결과를 바로 반환
+- Memoization된 결과 값을 Memoized value라고 한다
+
+### useMemo 사용법
+
+```jsx
+const memoizedValue = useMemo(
+	() => {
+		// 연산량이 높은 작업을 수행하여 결과를 반환
+		return computeExpensiveValue(의존성 변수1, 의존성 변수2);
+	},
+	[의존성 변수1, 의존성 변수2]
+);
+```
+
+- 의존성 배열에 있는 값이 변했을 때만 결과값을 반환하고 그렇지 않다면 기존 값을 그대로 반환
+- useMemo로 전달되는 함수는 렌더링이 이루어지는 동안 실행된다 (sideEffect에서 이루어 지는 것들이 useMemo에서 실행되면 안되는 이유)
+- 의존성 배열을 넣지 않으면 매 렌더링마다 함수가 실행됨으로 useMemo의 의미가 없어진다
+- 의존성 배열이 빈 배열일 경우 mount될 때만 호출이 된다
+
+## useCallback
+
+- useMemo와 유사하지만 값이 아닌 함수를 반환한다
+- 함수 그 자체를 기억
+- useCallback에서 state값은 최초의 상태가 계속 고정되기 때문에, useEffect처럼 값을 갱신하는 조건을 지정해주어야 한다.
+
+### useCallback 사용법
+
+```jsx
+const memoizedCallback = useCallback(
+	() => {
+		doSomething(의존성 변수1, 의존성 변수2);
+	},
+	[의존성 변수1, 의존성 변수2]
+);
+```
+
+- useMemo와 마찬가지로 함수와 의존성 배열을 parameter로 받음 (parameter로 받는 함수를 callback이라고 함)
+- 의존성 변수가 하나라도 변하면 callback함수를 반환함
+
+## useRef
+
+- Reference를 사용하기 위한 Hook
+- HTML에서 id를 사용해 DOM에 이름을 다는 것처럼 useRef를 이용해 DOM에 이름을 달 수 있다
+- 내부의 데이터가 변경되어도 별도로 알리지 않음
+    - Callback ref로 알 수 있다
+- mount 해제 전까지 유지됨
+    - ref를 사용하는 경우는 임의로 값을 변경하지 않는다면 값이 계속 유지
+- 변경 가능한 current 속성을 가진 상자
+    - 값이 변경되어도 컴포넌트의 리렌더링이 없어 빠른 참조가 가능하다.
+
+### Reference
+
+- 특정 컴포넌트에 접근할 수 있는 객체
+- Reference에서 사용하는 current라는 속성은 현재 reference하고 있는 Element이다.
+
+### useRef를 사용하는 경우
+
+- React가 직접 Dom을 선택해야 하는 경우 사용
+    - 특정 엘리먼트의 크기나 색상을 가져오는 경우
+    - 스크롤의 위치를 가지고 와야 하는 경우
+    - 대상에 대한 포커스를 설정하는 경우
+
+### useRef를 사용하는 이유
+
+- 컴포넌트 안에 있는 DOM에 id를 지정한 후 해당 컴포넌트를 여러번 재사용하게 됐을 경우 id는 유일해지지 않아 문제가 생길 수 있다. —> ref를 사용
+
+### useRef 사용법
+
+```jsx
+const refContainer = useRef(초깃값);
+```
+
+- 초깃값을 넣으면 해당 초깃값으로 초기화된 reference객체를 반환
+    - ex) 초깃값이 null이라면 current값이 null인 객체가 반환됨
+    - useRef()를 이용해 Ref 객체 refContainer를 만듦
+- 리액트에 있는 모든 컴포넌트는 reference element를 가지고 있어서 어떤 컴포넌트에 ref={변수명}을 넣어준다면 리액트에서 해당 컴포넌트를 참조하게 된다.
+    - 예시 - 초기화 버튼을 누르면 input에 포커스를 주는 경우
+        
+        ```jsx
+        import React, { useState, useRef } from "react";
+        
+        function UseRefStudy() {
+          const [testValue, setTestValue] = useState("");
+          const testInput = useRef(); //Ref객체를 만듦
+        
+          const onChange = (e) => {
+            setTestValue(e.target.value);
+          };
+        
+          const onReset = () => {
+            setTestValue("");
+            testInput.current.focus(); //Ref 객체의 current값이 원하는 DOM을 가리키게 됨
+        															 //focus()를 통해 input에 focus가 잡히게 됨
+          };
+        
+          return (
+            <div>
+              <input
+                placeholder="test"
+                onChange={onChange}
+                value={testValue}
+                ref={testInput} //DOM에 객체를 ref값으로 설정해줌
+              />
+              <button onClick={onReset}>초기화</button>
+            </div>
+          );
+        }
+        
+        export default UseRefStudy;
+        ```
+        
+
+## Hook의 규칙
+
+- Hook은 최상위 레벨에서만 호출해야 한다
+    - 반복문이나 조건문, 중첩된 함수 내에서 호출하면 안됨
+    - 컴포넌트가 렌더링될 때마다 매번 같은 순서로 호출되어야 됨(useState와 useEffect를 올바르게 호출해서 state를 관리하기 위해서)
+- React 함수 컴포넌트에서만 Hook을 호출해야 한다.
+
+## Custom Hook
+
+- 여러 컴포넌트에서 반복해서 사용되는 로직을 hook으로 만들기 위해 사용
